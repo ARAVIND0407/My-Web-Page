@@ -14,7 +14,7 @@ body {
     color: #fff;
 }
 
-.background{
+.background {
     position: fixed;
     top: 0;
     left: 0;
@@ -318,10 +318,11 @@ nav ul li a:hover::after {
 
 /* --------contact---------- */
 
-#contact{
-    background: linear-gradient(rgba(255,255,255,0.05) ,rgba(0,0,0,1));
+#contact {
+    background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 1));
     backdrop-filter: blur(5px);
 }
+
 .contact-left {
     flex-basis: 35%;
 }
@@ -395,7 +396,8 @@ form .btn2 {
     cursor: pointer;
     transition: 0.5s;
 }
-form .btn2:hover{
+
+form .btn2:hover {
     color: #000;
 }
 
@@ -466,7 +468,8 @@ nav .fa-solid {
         background: none;
         transition: background 0.5s;
     }
-    nav ul li:hover{
+
+    nav ul li:hover {
         background-color: rgba(0, 0, 0, 0.5);
     }
 

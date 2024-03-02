@@ -4,6 +4,11 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
+:root{
+    --yellow:#ffd000;
+}
+
 ::-webkit-scrollbar{
     width: 2px;
     background: #000000;
@@ -14,7 +19,7 @@
     border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background: #FFC003;
+    background: var(--yellow);
 }
 html {
     scroll-behavior: smooth;
@@ -52,7 +57,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0 2rem;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -78,7 +91,7 @@ nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
-    background: #FFC003;
+    background: var(--yellow);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -100,7 +113,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #FFC003;
+    color: var(--yellow);
 }
 
 /* ---------about--------- */
@@ -108,8 +121,8 @@ nav ul li a:hover::after {
 #about {
     padding: 80px 0;
     color: #fff;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -126,11 +139,20 @@ nav ul li a:hover::after {
 
 .about-col-1 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 15px;
 }
 
 .about-col-2 {
     flex-basis: 60%;
+}
+
+.about-col-2 p>a{
+    text-decoration: none;
+    color: #ff004f;
+    font-weight: 600;
 }
 
 .sub-title {
@@ -159,7 +181,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #FFC003;
+    background-color: var(--yellow);
     transition: 0.5s;
 }
 
@@ -173,8 +195,12 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #ff9a03;
+    color: var(--yellow);
     font-size: 14px;
+}
+
+.tab-contents ul table tr li{
+    padding-right: 15px;
 }
 
 .tab-contents {
@@ -229,7 +255,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-    background: #FFC003;
+    background: var(--yellow);
     color: #000;
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
     transform: translateY(-10px);
@@ -266,7 +292,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6) 50%, #FFC003 115%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6) 50%, var(--yellow) 115%);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -312,7 +338,7 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #FFC003;
+    border: 1px solid var(--yellow);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -321,7 +347,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #FFC003;
+    background: var(--yellow);
     color: #000;
 }
 
@@ -346,7 +372,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p i {
-    color: #FFC003;
+    color: var(--yellow);
     margin-right: 15px;
     font-size: 25px;
 }
@@ -365,13 +391,13 @@ nav ul li a:hover::after {
 }
 
 .social-icons a:hover {
-    color: #FFC003;
+    color: var(--yellow);
     transform: translateY(-6px);
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: #FFC003;
+    background: var(--yellow);
 }
 
 .btn.btn2:active {
@@ -396,7 +422,7 @@ form textarea {
 }
 
 form .btn2 {
-    background: #FFC003;
+    background: var(--yellow);
     color: #fff;
     border-radius: 6px;
     padding: 14px 60px;
@@ -421,7 +447,8 @@ form .btn2:active {
     text-align: center;
     padding: 25px 0;
     background: #000;
-    font-weight: 200;
+    text-transform: uppercase;
+    /* font-weight: 200; */
 }
 
 
